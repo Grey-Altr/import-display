@@ -1,5 +1,5 @@
 /* Imports */
-
+import { fetchMovies } from './fetch-utils.js';
 /* Get DOM Elements */
 
 /* State */
