@@ -5,7 +5,7 @@ const SUPABASE_KEY =
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 export async function fetchMovies() {
-    const response = await client.from(movies).select('*').order('id');
+    const response = await client.from('movies').select('*').order('id');
 
     return response.data;
 }
