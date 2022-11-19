@@ -23,3 +23,24 @@ export function renderMovies(movies) {
 
     return div;
 }
+
+export function renderCities(cities) {
+    const div = document.createElement('div');
+    div.classList.add('cities-card');
+
+    const cityEl = document.createElement('h3');
+    cityEl.textContent = cities.title;
+
+    const countryEl = document.createElement('p');
+    countryEl.textContent = cities.country;
+
+    const cCodeEl = document.createElement('p');
+    cCodeEl.textContent = cities.country_code;
+
+    const postalEl = document.createElement('p');
+    postalEl.textContent = cities.postal_code;
+
+    div.append(cityEl, cCodeEl, postalEl);
+
+    return div;
+}
