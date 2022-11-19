@@ -65,3 +65,24 @@ export function renderCars(cars) {
 
     return div;
 }
+
+export function renderPeople(people) {
+    const div = document.createElement('div');
+    div.classList.add('people-card');
+
+    const fNameEl = document.createElement('h3');
+    fNameEl.textContent = people.first_name;
+
+    const lNameEl = document.createElement('p');
+    lNameEl.textContent = people.last_name;
+
+    const emailEl = document.createElement('p');
+    emailEl.textContent = people.email;
+
+    const genderEl = document.createElement('p');
+    genderEl.textContent = people.gender;
+
+    div.append(fNameEl, lNameEl, emailEl, genderEl);
+
+    return div;
+}

@@ -1,6 +1,6 @@
 /* Imports */
 import { fetchMovies, fetchCities, fetchCars, fetchPeople } from './fetch-utils.js';
-import { renderMovies, renderCities, renderCars } from './render-utils.js';
+import { renderMovies, renderCities, renderCars, renderPeople } from './render-utils.js';
 /* Get DOM Elements */
 const moviesContainer = document.getElementById('movies-container');
 const citiesContainer = document.getElementById('cities-container');
@@ -38,8 +38,8 @@ window.addEventListener('load', async () => {
 window.addEventListener('load', async () => {
     const people = await fetchPeople();
     for (let person of people) {
-        const carEl = renderPeople(person);
-        peopleContainer.append(carEl);
+        const personEl = renderPeople(person);
+        peopleContainer.append(personEl);
     }
 });
 

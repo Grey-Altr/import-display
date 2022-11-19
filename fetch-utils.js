@@ -23,7 +23,7 @@ export async function fetchCars() {
 }
 
 export async function fetchPeople() {
-    const response = await client.from('People').select('*').order('id');
+    const response = await client.from('people').select('*').order('id');
 
     return response.data;
 }
