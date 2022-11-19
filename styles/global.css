@@ -31,5 +31,23 @@ header .logo {
 }
 
 main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     padding: 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: dotted 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+div {
+    border: inset 3px;
+    margin: 5px;
+    background: rgb(208, 148, 18);
 }
