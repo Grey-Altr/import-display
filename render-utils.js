@@ -44,3 +44,24 @@ export function renderCities(cities) {
 
     return div;
 }
+
+export function renderCars(cars) {
+    const div = document.createElement('div');
+    div.classList.add('cars-card');
+
+    const makeEl = document.createElement('h3');
+    makeEl.textContent = cars.make;
+
+    const modelEl = document.createElement('p');
+    modelEl.textContent = cars.model;
+
+    const yearEl = document.createElement('p');
+    yearEl.textContent = cars.year;
+
+    const colorEl = document.createElement('p');
+    colorEl.textContent = cars.color;
+
+    div.append(makeEl, modelEl, yearEl, colorEl);
+
+    return div;
+}

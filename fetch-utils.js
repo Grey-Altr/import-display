@@ -21,3 +21,9 @@ export async function fetchCars() {
 
     return response.data;
 }
+
+export async function fetchPeople() {
+    const response = await client.from('People').select('*').order('id');
+
+    return response.data;
+}

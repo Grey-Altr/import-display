@@ -1,10 +1,11 @@
 /* Imports */
-import { fetchMovies, fetchCities, fetchCars } from './fetch-utils.js';
-import { renderMovies, renderCities } from './render-utils.js';
+import { fetchMovies, fetchCities, fetchCars, fetchPeople } from './fetch-utils.js';
+import { renderMovies, renderCities, renderCars } from './render-utils.js';
 /* Get DOM Elements */
 const moviesContainer = document.getElementById('movies-container');
 const citiesContainer = document.getElementById('cities-container');
 const carsContainer = document.getElementById('cars-container');
+const peopleContainer = document.getElementById('people-container');
 /* State */
 
 /* Events */
@@ -31,6 +32,14 @@ window.addEventListener('load', async () => {
     for (let car of cars) {
         const carEl = renderCars(car);
         carsContainer.append(carEl);
+    }
+});
+
+window.addEventListener('load', async () => {
+    const people = await fetchPeople();
+    for (let person of people) {
+        const carEl = renderPeople(person);
+        peopleContainer.append(carEl);
     }
 });
 
