@@ -9,3 +9,9 @@ export async function fetchMovies() {
 
     return response.data;
 }
+
+export async function fetchCities() {
+    const response = await client.from('cities').select('*').order('id');
+
+    return response.data;
+}
