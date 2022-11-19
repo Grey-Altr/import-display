@@ -29,7 +29,7 @@ export function renderCities(cities) {
     div.classList.add('cities-card');
 
     const cityEl = document.createElement('h3');
-    cityEl.textContent = cities.title;
+    cityEl.textContent = cities.city;
 
     const countryEl = document.createElement('p');
     countryEl.textContent = cities.country;
@@ -40,7 +40,7 @@ export function renderCities(cities) {
     const postalEl = document.createElement('p');
     postalEl.textContent = cities.postal_code;
 
-    div.append(cityEl, cCodeEl, postalEl);
+    div.append(cityEl, countryEl, cCodeEl, postalEl);
 
     return div;
 }

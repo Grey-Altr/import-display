@@ -15,3 +15,9 @@ export async function fetchCities() {
 
     return response.data;
 }
+
+export async function fetchCars() {
+    const response = await client.from('cars').select('*').order('id');
+
+    return response.data;
+}
